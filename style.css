@@ -89,7 +89,7 @@
   width: 100%;
   position: fixed;
   display: flex;
-  top: 600px;
+  bottom: 2px;
   /* background-image: url(download.jpeg); */
   background: linear-gradient(45deg, rgb(26, 23, 37),rgb(65, 62, 83),rgb(37, 37, 54));
   background-repeat: no-repeat;

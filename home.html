@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>music player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/fd.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar" id="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <a href="#">Home</a>
+            <a href="https://www.jiosaavn.com/shows/kahaaniya/1/SWXbXhBWwtA_">Podcast</a>
+            <a href="https://play.google.com/store/apps">Download app</a>
+            <a href="#">Sign in</a>
+            <a href="#" class="icon" onclick="shownav()" >
+                <i class="fa fa-bars"></i>
+            </a>
+            
+        </div>
+
+        <div id='player' class="player">
+            <div class="audio-container" id="audio-container">
+                <div class="audio-info">
+                    <h4 id="title">Melody</h4>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+                <audio src="music/Tere Hawaale.mp3" id="audio"></audio>
+                <div class="img-container">
+                    <img src="https://c.saavncdn.com/119/Tere-Hawaale-From-Laal-Singh-Chaddha-Hindi-2022-20220804093945-500x500.jpg" alt="music-cover" id="cover">
+                </div>
+                <div class="navigation">
+                    <button id="prev" class="action-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button id="play" class="action-btn action-btn-big">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="next" class="action-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>       
+                </div>       
+            </div>
+        </div>
+
+        <div class="content">
+            
+            <div class="recently">
+
+                <h1>Recently Played</h1><br><br>
+                <div class="recently cont">
+          
+                    <a onclick="playthis(0);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/119/Tere-Hawaale-From-Laal-Singh-Chaddha-Hindi-2022-20220804093945-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(1);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.scdn.co/image/ab67616d0000b273ec8ba3b295efbed9fb672237">
+                    </a>
+                    <a onclick="playthis(2);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/WRmq_GLbn0c/maxresdefault.jpg">
+                    </a>
+                    <a onclick="playthis(3);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/736/Dil-Kya-Kare-Hindi-2024-20240116053723-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(4);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/70/97/87/709787bf-c72b-18ef-0c3c-cd8a5cb017b9/196922878879_Cover.jpg/1200x630bb.jpg">
+                    </a>
+                    <a onclick="playthis(5);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/696/Guli-Mata-Hindi-2023-20230714050721-500x500.jpg">
+                    </a><br><br>
+                </div>
+            </div>
+
+            <div class="recently">
+
+                <h1>New Releases</h1><br><br>
+                <div class="recently cont">
+          
+                    <a onclick="playthis(6);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/IjJapzmqTpY/maxresdefault.jpg">
+                    </a>
+                    <a onclick="playthis(7);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/424/Zihaal-e-Miskin-Hindi-2023-20230523053359-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(8);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/583/Bhool-Bhulaiyaa-2-Hindi-2022-20220816171003-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(9);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://www.pagalworld.com.cm/siteuploads/thumb/sft140/69949_4.jpg">
+                    </a>                  
+                    <a onclick="playthis(10);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/366/Baithe-Baithe-Hindi-2021-20210728105931-500x500.jpg">
+                    </a>                   
+                    <a onclick="playthis(11);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://www.pagalworld.com.cm/siteuploads/thumb/sft131/65336_4.jpg">
+                    </a><br><br>
+                </div>
+            </div>
+
+            <div class="recently">
+
+                <h1>All Time Favourites - English</h1><br><br>
+                <div class="recently cont">
+          
+                    <a onclick="playthis(12);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i1.sndcdn.com/artworks-lgqc63x30JwTqPJu-6Rg8Yw-t500x500.png">
+                    </a>
+                    <a onclick="playthis(13);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i0.wp.com/voltamusic.net/wp-content/uploads/Justin-Bieber-Intentions-ft.-Quavo.jpg?fit=780%2C493&ssl=1">
+                    </a>
+                    <a onclick="playthis(14);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://images.hungama.com/c/1/b37/2db/23242409/23242409_300x300.jpg">
+                    </a>
+                    <a onclick="playthis(15);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/V09e-sKOkhE/maxresdefault.jpg">
+                    </a>
+                    <a onclick="playthis(16);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i1.sndcdn.com/artworks-000047914358-71p48f-t500x500.jpg">
+                    </a>
+                    <a onclick="playthis(17);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/dUFCr1bA_zo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCPZj9yOXjsgM5TCDj5i05s1IFk6g">
+                    </a><br><br>
+
+                </div>
+            </div>
+
+            <div class="recently">
+
+                <h1>Top Albums - Punjabi</h1><br><br>
+                <div class="recently cont">
+          
+                    <a onclick="playthis(18);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/179/Gall-Mukdi-Aa-Punjabi-2024-20240314201003-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(19);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://mp3fix.in/siteuploads/thumb/sft59/29221_4.jpg">
+                    </a>
+                    <a onclick="playthis(20);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/279/Lehanga-Punjabi-2022-20221208010007-500x500.jpg">
+                    </a>
+                    <a onclick="playthis(21);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/176/Waalian-Punjabi-2020-20220804080504-500x500.jpg">
+                    </a>                   
+                    <a onclick="playthis(22);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://c.saavncdn.com/093/Enemy-Punjabi-2024-20240306055559-500x500.jpg">
+                    </a>                   
+                    <a onclick="playthis(23);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/UCf25hOok7I/maxresdefault.jpg">
+                    </a><br><br>
+                </div>
+            </div>
+
+            <div class="recently">
+
+                <h1>Fresh Hits</h1><br><br>
+                <div class="recently cont">
+          
+                    <a onclick="playthis(24);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://a10.gaanacdn.com/gn_img/albums/YoEWlabzXB/EWlw69Dz3z/size_m.jpg">
+                    </a>
+                    <a onclick="playthis(25);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i.ytimg.com/vi/tqCxXoGiJXo/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGAgYChgMA8=&rs=AOn4CLAxYybh0GQWMs9NevZNQAL0C_zswQ">
+                    </a>
+                    <a onclick="playthis(26);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://a10.gaanacdn.com/gn_img/albums/ZaP37OR3Dy/P37OnxDl3D/size_m.jpg">
+                    </a>
+                    <a onclick="playthis(27);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://www.pagalworld.com.cm/siteuploads/thumb/sft7/3410_4.jpg">
+                    </a>                   
+                    <a onclick="playthis(28);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://source.boomplaymusic.com/group10/M00/03/17/c8268b11b47b4911bd7c4f2c86f78244_464_464.jpg">
+                    </a>
+                    <a onclick="playthis(29);" ondblclick="pauseSong()" class="song" >
+                        <img src="https://i1.sndcdn.com/artworks-W48qnOn1zy79Awbr-PVZ9GQ-t500x500.jpg">
+                    </a><br><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
